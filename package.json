@@ -2,7 +2,6 @@
   "name": "supplementads-astro",
   "type": "module",
   "version": "1.0.0",
-  "packageManager": "pnpm@10.28.2",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
