@@ -1,0 +1,53 @@
+---
+const steps = [
+  {
+    num: "1",
+    title: "Browse the swipe file",
+    text: "of 500+ winning supplement ads organized by niche, format, and angle. Find proven creatives in your exact supplement category in seconds.",
+  },
+  {
+    num: "2",
+    title: "Convert to a JSON profile",
+    text: "using our one-click system that extracts the winning elements — layout, colors, copy angles, imagery style, hooks — into a structured creative blueprint.",
+  },
+  {
+    num: "3",
+    title: "Feed it into AI generators",
+    text: "with our step-by-step walkthroughs. Upload the JSON profile and watch AI produce dozens of scroll-stopping creative variations tailored to your brand.",
+  },
+  {
+    num: "4",
+    title: "Test, iterate, and scale",
+    text: "by rapidly cycling through AI-generated creatives. When you find a winner, generate more variations from it. This is how you beat ad fatigue and scale profitably.",
+  },
+];
+---
+
+<section class="bg-[#fff] px-[5%] py-12 md:py-20">
+  <div class="mx-auto max-w-3xl">
+    <p class="mb-2 text-xs font-bold uppercase tracking-widest text-muted-foreground">
+      HERE'S HOW IT WORKS
+    </p>
+    <h2 class="mb-10 font-heading text-2xl font-bold leading-tight tracking-heading text-foreground md:text-4xl">
+      The exact 4-step process that runs on repeat:
+    </h2>
+
+    <div class="flex flex-col gap-6">
+      {steps.map((step) => (
+        <div class="flex items-start gap-4">
+          <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-cta-green text-lg font-bold text-[#fff]">
+            {step.num}
+          </div>
+          <div class="pt-0.5">
+            <p class="mb-1 text-lg font-bold text-foreground">
+              {step.title}
+            </p>
+            <p class="text-base leading-relaxed text-[#333]">
+              {step.text}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

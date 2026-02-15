@@ -1,0 +1,73 @@
+---
+const faqs = [
+  {
+    question: "I'm a complete beginner — will this work for me?",
+    answer:
+      "Yes. Supplement Ads is designed so that anyone — from first-time advertisers to experienced media buyers — can use this system to produce winning creatives. You get the swipe file, the JSON profiles, the AI walkthroughs, and the testing framework. All you have to do is follow the steps.",
+  },
+  {
+    question: "What if I already run supplement ads?",
+    answer:
+      "Even better. If you're already running supplement ads, this system will supercharge your creative production. Most experienced advertisers see the biggest ROI because they already understand what converts — they just need a faster way to produce creatives at scale. The AI workflow will 10x your creative output overnight.",
+  },
+  {
+    question: "How is this different from other ad spy tools?",
+    answer:
+      "Most spy tools just show you ads. Supplement Ads goes three steps further — you get a curated swipe file of proven winners (not just random ads), the JSON profile system that converts any winning ad into a replicable blueprint, and step-by-step AI walkthroughs to generate new creatives from those profiles. It's not just seeing what works — it's replicating what works.",
+  },
+  {
+    question: "What supplement niches does this cover?",
+    answer:
+      "Every major supplement category. Protein powders, pre-workouts, greens, nootropics, fat burners, collagen, multivitamins, gut health, sleep aids, adaptogens, and dozens more. The swipe file is organized by niche so you can find ads in your exact category in seconds. And the AI system works the same regardless of niche.",
+  },
+  {
+    question: "Do I need to know how to use AI tools?",
+    answer:
+      "No prior AI experience needed. The walkthroughs cover everything step-by-step — from setting up accounts on Midjourney, DALL-E, and Flux to uploading JSON profiles and generating creatives. You can produce your first AI-generated ad variations the same day you get access.",
+  },
+  {
+    question: "Still thinking about it?",
+    answer:
+      "Ask yourself why. 30 days from now, either you'll be 30 days older — or you'll be 30 days older with a pipeline of winning supplement ad creatives, AI workflows generating variations on demand, and a ROAS that actually makes your ad spend worth it. If I'm wrong, you lose nothing with the 14-day guarantee. But what if I'm right?",
+  },
+];
+---
+
+<section class="bg-[#0e0e0e] px-[5%] py-12 md:py-20">
+  <div class="mx-auto max-w-3xl">
+    <h2 class="mb-4 font-heading text-2xl font-bold leading-tight tracking-heading text-[#fff] md:text-4xl">
+      Frequently Asked Questions
+    </h2>
+
+    <p class="mx-auto mb-8 max-w-lg text-lg leading-relaxed text-[#999]">
+      Everything you need to know before you get started.
+    </p>
+
+    <div class="flex flex-col gap-3">
+      {faqs.map((faq) => (
+        <details class="group overflow-hidden rounded-xl border border-[#2a2a2a] bg-[#161616]">
+          <summary class="flex w-full cursor-pointer items-center justify-between p-5 text-left list-none [&::-webkit-details-marker]:hidden">
+            <span class="pr-4 text-lg font-semibold text-[#eee]">
+              {faq.question}
+            </span>
+            <svg
+              class="h-5 w-5 flex-shrink-0 text-[#666] transition-transform group-open:rotate-180"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </summary>
+          <div class="border-t border-[#2a2a2a] px-5 pb-5 pt-4">
+            <p class="leading-relaxed text-[#bbb]">{faq.answer}</p>
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

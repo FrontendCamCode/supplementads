@@ -1,0 +1,39 @@
+---
+interface Props {
+  text?: string;
+  discount?: string;
+  class?: string;
+  variant?: "yellow" | "green";
+}
+
+const {
+  text = "Get Supplement Ads Now!",
+  discount = "Launch pricing - limited time only",
+  class: className = "",
+  variant = "green",
+} = Astro.props;
+
+const isYellow = variant === "yellow";
+---
+
+<div class={`flex flex-col items-center gap-3 ${className}`}>
+  {discount && (
+    <p
+      class={`max-w-xs text-center text-sm font-semibold ${
+        isYellow ? "text-[#ccc]" : "text-foreground"
+      }`}
+    >
+      {discount}
+    </p>
+  )}
+  <a
+    href="#pricing"
+    class={`flex min-h-[56px] w-full max-w-md items-center justify-center rounded-lg px-8 py-4 text-center text-lg font-bold shadow-lg transition-all hover:scale-[1.02] active:scale-[0.98] md:text-xl ${
+      isYellow
+        ? "bg-gradient-to-b from-[#f5c518] to-[#d4a017] text-[#1a1a00] shadow-[0_4px_20px_rgba(245,197,24,0.3)] [text-shadow:0_1px_0px_rgba(255,255,255,0.2)]"
+        : "bg-gradient-to-b from-[#2ecc71] to-[#27ae60] text-[#fff] shadow-[0_4px_20px_rgba(46,204,113,0.3)]"
+    }`}
+  >
+    {text}
+  </a>
+</div>

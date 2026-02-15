@@ -1,0 +1,39 @@
+---
+interface Props {
+  handle: string;
+  date: string;
+  platform?: string;
+  quote: string;
+  name: string;
+  title: string;
+  variant?: "light" | "dark";
+}
+
+const { handle, date, platform, quote, name, title, variant = "light" } = Astro.props;
+const isDark = variant === "dark";
+---
+
+<div
+  class={`rounded-xl border p-6 md:p-8 ${
+    isDark ? "border-[#2a2a2a] bg-[#161616]" : "border-border bg-[#fff]"
+  }`}
+>
+  <div class={`mb-4 flex items-center gap-2 text-sm ${isDark ? "text-[#777]" : "text-muted-foreground"}`}>
+    <span class={`font-medium ${isDark ? "text-[#ccc]" : "text-foreground"}`}>{handle}</span>
+    <span>&middot; {date}</span>
+    {platform && <span>via {platform}</span>}
+  </div>
+  <p class={`mb-6 leading-relaxed ${isDark ? "text-[#ccc]" : "text-foreground"}`}>{quote}</p>
+  <div class="flex items-center gap-3">
+    <div class={`flex h-10 w-10 items-center justify-center rounded-full ${isDark ? "bg-[#2a2a2a]" : "bg-secondary"}`}>
+      <svg class={`h-5 w-5 ${isDark ? "text-[#666]" : "text-muted-foreground"}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+        <circle cx="12" cy="7" r="4" />
+      </svg>
+    </div>
+    <div>
+      <p class={`font-semibold ${isDark ? "text-[#fff]" : "text-foreground"}`}>{name}</p>
+      <p class={`text-sm ${isDark ? "text-[#777]" : "text-muted-foreground"}`}>{title}</p>
+    </div>
+  </div>
+</div>

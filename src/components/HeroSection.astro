@@ -1,0 +1,78 @@
+---
+import CtaButton from "./CtaButton.astro";
+import SatisfiedCounter from "./SatisfiedCounter.astro";
+---
+
+<section class="bg-gradient-to-b from-[#0a0a0a] to-[#1a1a1a] px-[5%] pb-12 pt-8 md:pb-20 md:pt-12">
+  <div class="mx-auto max-w-3xl">
+    <!-- Author badge -->
+    <div class="mb-8 flex items-center justify-center gap-3">
+      <div class="flex h-12 w-12 items-center justify-center rounded-full bg-[#2a2a2a]">
+        <svg class="h-6 w-6 text-[#888]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+          <circle cx="12" cy="7" r="4" />
+        </svg>
+      </div>
+      <div>
+        <p class="font-semibold text-[#fff]">Cam Duncan</p>
+        <p class="text-sm text-[#888]">Supplement advertising specialist</p>
+      </div>
+    </div>
+
+    <!-- Video Sales Letter -->
+    <div class="mb-10 overflow-hidden rounded-xl border border-[#2a2a2a] bg-[#111]">
+      <div class="relative aspect-video w-full">
+        <div class="absolute inset-0 flex flex-col items-center justify-center gap-3">
+          <div class="flex h-16 w-16 items-center justify-center rounded-full bg-[#fff]/10 backdrop-blur-sm">
+            <div class="ml-1 h-0 w-0 border-y-[10px] border-l-[18px] border-y-transparent border-l-[#fff]"></div>
+          </div>
+          <p class="max-w-[200px] text-center text-sm text-[#666]">
+            Watch the free training
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Badge -->
+    <div class="mb-8 flex justify-center">
+      <div class="flex items-center gap-2 rounded-md border border-[#333] bg-[#1a1a1a] px-4 py-2 text-sm text-[#888]">
+        <span class="font-semibold text-[#fff]">NEW:</span>
+        <span>The swipe file behind 500+ winning supplement ads</span>
+      </div>
+    </div>
+
+    <!-- Main headline -->
+    <h1 class="mb-6 text-center font-heading text-3xl font-bold leading-tight tracking-heading text-[#fff] md:text-5xl">
+      There's only two types of supplement advertisers...
+    </h1>
+
+    <!-- Subheadline -->
+    <div class="mx-auto mb-4 max-w-2xl text-center text-lg leading-relaxed text-[#999] md:text-xl">
+      <p class="mb-3">
+        ...the ones that print money with their ads and the ones that watch them do it.
+      </p>
+      <p class="mb-3">That's it.</p>
+      <p class="mb-3">
+        If you're here, chances are you're tired of watching a handful of brands dominate every feed while your ads struggle to break even.
+      </p>
+    </div>
+
+    <p class="mx-auto mb-8 max-w-2xl text-center text-lg font-semibold leading-relaxed text-[#fff] md:text-xl">
+      In the next 7 minutes, I'm going to show you the exact system that will take you from guessing at creatives...
+      <span class="text-cta-yellow">
+        to generating winning supplement ads with AI on demand.
+      </span>
+    </p>
+
+    <!-- CTA -->
+    <CtaButton variant="yellow" />
+
+    <!-- Guarantee -->
+    <p class="mx-auto mt-4 max-w-xs text-center text-sm text-[#888]">
+      14-Day Money-Back Guarantee. Zero risk.
+    </p>
+
+    <!-- Satisfied counter -->
+    <SatisfiedCounter variant="dark" />
+  </div>
+</section>
